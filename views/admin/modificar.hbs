@@ -1,0 +1,57 @@
+<div class="modificar">
+    <div class="container" style="margin: 100px auto;">
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <h4>Modificar la Novedad N° {{novedades.id}}</h4>
+                <form action="/admin/novedades/modificar" method="post" enctype="multipart/form-data">
+                    <input type="hidden" name="id" value="{{novedades.id}}">
+
+                    <!-- Diseño -->
+                    <div class="form-group">
+                        <label for="diseño">Diseño</label>
+                        <input type="text" class="form-control" id="diseño" name="diseño" value="{{novedades.diseño}}"
+                            required>
+                    </div>
+
+                    <!-- Valor U$D -->
+                    <div class="form-group">
+                        <label for="valor-usd">Valor U$D</label>
+                        <input type="text" class="form-control" id="valor-usd" name="valor-usd"
+                            value="{{novedades.valor-usd}}" required>
+                    </div>
+
+                    <!-- Opciones -->
+                    <div class="form-group">
+                        <label for="opciones">Opciones</label>
+                        <textarea class="form-control" id="opciones" name="opciones"
+                            required>{{novedades.opciones}}</textarea>
+                    </div>
+
+                    <!-- Imagen actual -->
+                    <div class="form-group">
+                        <label for="imagen">Imagen actual</label>
+                        <div>
+                            <img src="{{novedades.imagen}}" alt="Imagen actual"
+                                style="max-width: 100px; max-height: 100px;">
+                        </div>
+                        <div>
+                            <input type="checkbox" id="img_delete" name="img_delete" value="1">
+                            <label for="img_delete">Eliminar imagen actual</label>
+                            <input type="hidden" name="img_original" value="{{novedades.img_id}}">
+                        </div>
+                    </div>
+
+                    <!-- Subir nueva imagen -->
+                    <div class="form-group">
+                        <label for="imagen">Subir nueva imagen</label>
+                        <input type="file" class="form-control" id="imagen" name="imagen">
+                    </div>
+
+
+                    <!-- Botón Modificar -->
+                    <button type="submit" class="btn btn-primary">Modificar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

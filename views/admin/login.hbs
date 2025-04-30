@@ -1,0 +1,30 @@
+<div class="login-container">
+    <h2 class="login-title">Iniciar Sesión</h2>
+    <form action="/admin/login" method="post" novalidate>
+      <!-- Campo Usuario -->
+      <div class="mb-3">
+        <label for="usuario" class="form-label">Usuario</label>
+        <input type="text" id="usuario" name="usuario" class="form-control" placeholder="Ingresa tu usuario" required>
+        <div class="invalid-feedback">
+          Por favor, ingresa tu nombre de usuario.
+        </div>
+      </div>
+      <!-- Campo Contraseña -->
+      <div class="mb-3">
+        <label for="password" class="form-label">Contraseña</label>
+        <input type="password" id="password" name="password" class="form-control" placeholder="Ingresa tu contraseña" required>
+        <div class="invalid-feedback">
+          Por favor, ingresa tu contraseña.
+        </div>
+      </div>
+      <!-- Botón Iniciar Sesión -->
+      <button type="submit" class="btn btn-primary w-100">Iniciar Sesión</button>
+    </form>
+    {{#if error}}
+    <p>Usuario y/o Contraseña Incorrectas</p>
+    {{/if}}
+    <!-- Enlace para recuperar contraseña -->
+    <div class="login-footer">
+      <p>¿Olvidaste tu contraseña? <a href="/reset-password">Recupérala aquí</a></p>
+    </div>
+  </div>

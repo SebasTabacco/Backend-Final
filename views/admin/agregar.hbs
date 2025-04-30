@@ -1,0 +1,24 @@
+<div class="modi-1">
+<div class="container" style="margin:100px auto">
+    <div class="row">
+        <div class="col-6-offset-3">
+            <h4>Agregar una Nueva Novedad</h4>
+            <form action="/admin/novedades/agregar" method="post" enctype="multipart/form-data">
+                <div class="mb-3 row">
+                    <input type="text" class="form-control" placeholder="Diseño" name="Diseno" required>
+                </div>
+                <div class="mb-3 row">
+                    <input type="text" class="form-control" placeholder="Valor U$D" name="Valor_USD" required>
+                </div>
+                <div class="mb-3 row">
+                    <label>Imagen: <input type="file" name="imagen" id="imagen"/></label>
+                </div>
+                <div class="mb-3 row">
+                    <input type="text" class="form-control" placeholder="Opciones" name="Opciones" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Guardar</button>
+            </form>
+        </div>
+    </div>
+</div>
+</div>

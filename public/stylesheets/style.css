@@ -1,0 +1,315 @@
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background-color: #555;
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+  body {
+    background-size: contain; /* Ajusta la imagen para pantallas más pequeñas */
+  }
+}
+/* ===== Header Principal ===== */
+header {
+  background-color: #333; /* Fondo oscuro */
+  color: white; /* Texto en blanco */
+  padding: 20px 0; /* Espaciado superior e inferior */
+  text-align: center; /* Centra el contenido */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Sombra elegante */
+  border-bottom: 3px solid #00bcd4; /* Línea decorativa inferior */
+}
+
+/* ===== Contenedor del Header ===== */
+.holder {
+  display: flex; /* Activa flexbox */
+  justify-content: center; /* Centra los elementos horizontalmente */
+  align-items: center; /* Centra los elementos verticalmente */
+  gap: 15px; /* Espacio entre el logo y el texto */
+}
+
+/* ===== Logo del Header ===== */
+.holder img {
+  width: 100px; /* Tamaño del logo */
+  height: auto; /* Mantiene proporciones */
+  border-radius: 10px; /* Bordes redondeados */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra elegante */
+  transition: transform 0.3s ease; /* Transición suave al interactuar */
+}
+
+.holder img:hover {
+  transform: scale(1.1); /* Aumenta ligeramente el tamaño al pasar el cursor */
+}
+
+/* ===== Texto del Título ===== */
+.holder h1 {
+  font-size: 2.5em; /* Tamaño del texto */
+  font-weight: bold; /* Negrita */
+  text-transform: uppercase; /* Texto en mayúsculas */
+  letter-spacing: 2px; /* Espaciado entre letras */
+  margin: 0; /* Elimina márgenes */
+  color: #00bcd4; /* Azul claro */
+  transition: color 0.3s ease; /* Transición suave del color */
+}
+
+.holder h1:hover {
+  color: #fff; /* Cambia a blanco puro al pasar el cursor */
+}
+
+/* ===== Responsividad ===== */
+@media (max-width: 768px) {
+  .holder {
+    flex-direction: column; /* Los elementos se apilan verticalmente en pantallas pequeñas */
+  }
+
+  .holder h1 {
+    font-size: 2em; /* Reduce el tamaño del texto */
+  }
+
+  .holder img {
+    width: 80px; /* Reduce el tamaño del logo */
+  }
+}
+
+/* ===== Footer Principal ===== */
+.footer {
+  background-color: rgb(23, 2, 43); /* Fondo oscuro */
+  color: rgb(10, 192, 216, 0.911); /* Texto blanco */
+  text-align: center; /* Centra todo el contenido */
+  padding: 20px 10px; /* Espaciado interno */
+  border-top: 3px solid #555; /* Línea superior */
+  margin-top: 50px; /* Separación del contenido principal */
+  box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.2); /* Sombra superior */
+}
+/*Formulaio Login*/
+.login-container {
+  background-color: white; /* Fondo del formulario */
+  border-radius: 10px; /* Bordes redondeados */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+  max-width: 400px; /* Ancho máximo */
+  padding: 20px; /* Espaciado interno */
+  width: 100%; /* Ancho completo en móviles */
+  margin-top: 80px;
+  margin-left: 40%;
+}
+
+.login-title {
+  text-align: center;
+  margin-bottom: 20px;
+  font-weight: bold;
+  color: #333; /* Color del texto */
+  letter-spacing: 1px;
+}
+
+.form-control {
+  border-radius: 5px; /* Bordes redondeados en los campos */
+  border: 1px solid #ccc; /* Borde gris claro */
+  padding: 10px; /* Espaciado interno */
+}
+
+.btn-primary {
+  background-color: #00bcd4; /* Azul claro */
+  border: none;
+  border-radius: 5px; /* Botones redondeados */
+  padding: 10px;
+  font-size: 1em;
+  transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #0097a7; /* Azul más oscuro */
+}
+
+.login-footer {
+  text-align: center;
+  margin-top: 15px;
+}
+
+.login-footer a {
+  color: #00bcd4;
+  text-decoration: none;
+}
+
+.login-footer a:hover {
+  text-decoration: underline;
+}
+/* Estilos específicos para el contenedor "modificar" */
+.modificar .container {
+  background-color: #0a383b;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(171, 57, 182, 0.575);
+  padding: 20px;
+  width: 100%;
+  max-width: 500px;
+  margin: 100px auto;
+}
+
+.modificar h4 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #aa19e4;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.modificar .form-group {
+  margin-bottom: 15px;
+}
+
+.modificar .form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 600;
+  color: #0fdada;
+}
+
+.modificar .form-group input,
+.modificar .form-group textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #a728e2;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: border-color 0.3s ease;
+}
+
+.modificar .form-group input:focus,
+.modificar .form-group textarea:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+.modificar .form-group textarea {
+  resize: none;
+  height: 100px;
+}
+
+.modificar button {
+  background-color: #007bff;
+  color: #ffffff;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  width: 100%;
+  transition: background-color 0.3s ease;
+}
+
+.modificar button:hover {
+  background-color: #0056b3;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+  .modificar .container {
+    padding: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  .modificar h4 {
+    font-size: 20px;
+  }
+
+  .modificar button {
+    font-size: 14px;
+  }
+}
+
+/* Estilos específicos para .modi-1 */
+.modi-1 {
+  padding: 20px;
+  background-color: #2e0f3a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.modi-1 .container {
+  background-color: #13302abb;
+  border-radius: 8px;
+  box-shadow: 4px 4px 8px 8px rgba(8, 162, 209, 0.301);
+  padding: 20px;
+  max-width: 600px;
+  width: 100%;
+}
+
+.modi-1 h4 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #9c52f0;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.modi-1 .form-control {
+  border: 1px solid #419129c5;
+  border-radius: 5px;
+  font-size: 16px;
+  padding: 10px;
+  width: 100%;
+  margin-bottom: 15px;
+  transition: border-color 0.3s ease;
+}
+
+.modi-1 .form-control:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+.modi-1 .form-group label {
+  font-weight: 600;
+  color: #555555;
+  margin-bottom: 5px;
+}
+
+.modi-1 button {
+  background-color: #007bff;
+  color: #ffffff;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  width: 100%;
+  transition: background-color 0.3s ease;
+}
+
+.modi-1 button:hover {
+  background-color: #0056b3;
+}
+/* Etiqueta del campo de carga de imagen */
+.modi-1 label {
+  font-size: 1rem;
+  margin-bottom: 5px;
+  display: block;
+  color: #495057;
+}
+
+/* Campo de carga de imagen */
+.modi-1 input[type="file"] {
+  border: 1px solid #108b2a;
+  padding: 5px;
+  border-radius: 4px;
+  width: 100%;
+  font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+  .modi-1 .container {
+    padding: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  .modi-1 h4 {
+    font-size: 20px;
+  }
+
+  .modi-1 button {
+    font-size: 14px;
+  }
+}

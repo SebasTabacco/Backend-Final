@@ -1,0 +1,61 @@
+<div class="container" style="margin-top: 50px;">
+    <!-- Sección de saludo -->
+    <div class="row">
+        <p class="text-end">Hola, {{persona}}!
+            <a class="btn btn-danger" href="/admin/login/logout">
+                Cerrar Sesión <i class="fas fa-sign-out-alt"></i>
+            </a>
+        </p>
+    </div>
+
+    <!-- Título del listado con botón "Agregar Nuevo" -->
+    <div class="row align-items-center">
+        <div class="col-md-6">
+            <h2 class="text-start">Listado de Diseños Web</h2>
+        </div>
+        <div class="col-md-6 text-end">
+            <a href="/admin/novedades/agregar" class="btn btn-success">
+                <i class="fas fa-plus"></i> Agregar Nuevo
+            </a>
+        </div>
+    </div>
+
+    <!-- Tabla/Listado -->
+    <div class="row">
+        <div class="col">
+            <table class="table table-bordered table-hover mt-3">
+                <thead class="table-dark">
+                    <tr>
+                        <th>ID</th>
+                        <th>Diseño</th>
+                        <th>Valor U$D</th>
+                        <th>Opciones</th>
+                        <th>Imagen</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {{#each novedades}}
+                    <tr>
+                        <td>{{id}}</td>
+                        <td>{{diseno}}</td>
+                        <td>{{valor_usd}}</td>
+                        <td>{{opciones}}</td>
+                        <td>{{{imagen}}}</td>
+                        <td>
+                            <a href="/admin/novedades/modificar/{{id}}" class="btn btn-sm btn-warning me-2">
+                                <i class="fas fa-edit"></i> Editar
+                            </a>
+                            <a href="/admin/novedades/delete/{{id}}" class="btn btn-sm btn-danger">
+                                <i class="fas fa-trash"></i> Borrar
+                            </a>
+                        </td>
+                    </tr>
+                    {{/each}}
+                </tbody>
+
+
+            </table>
+        </div>
+    </div>
+</div>
