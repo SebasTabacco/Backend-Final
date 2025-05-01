@@ -29,7 +29,7 @@ router.post('/', async (req, res, next) => {
       
       
 
-      console.log("Usuario autenticado:", req.session.Usuario); // Depuración
+      console.log("Usuario autenticado:", req.session.Usuario); 
 
       res.redirect('/admin/novedades');
     } else {
