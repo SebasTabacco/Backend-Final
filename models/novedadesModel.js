@@ -3,7 +3,7 @@ var pool = require('./bd');
 
 async function getNovedades() {
     try {
-        var query = 'SELECT id, `diseño` AS diseno, `valor-usd` AS valor_usd, opciones AS opciones, img_id FROM novedades_web';
+        var query = 'SELECT id, `disenio` AS diseno, `valor-usd` AS valor_usd, opciones AS opciones, img_id FROM novedades_web';
 
         var rows = await pool.query(query);
         console.log("Novedades transformadas:", rows); 
@@ -16,8 +16,9 @@ async function getNovedades() {
 async function insertNovedades(data) {
     try {
         console.log("Datos que se intentan insertar:", data);
-        var query = 'INSERT INTO novedades_web (`Diseño`, `Valor-USD`, `Opciones`, `img_id`) VALUES (?, ?, ?, ?)';
-        var rows = await pool.query(query, [data.Diseno, data.Valor_USD, data.Opciones, data.img_id]);
+        var query = 'INSERT INTO novedades_web (`disenio`, `Valor-USD`, `Opciones`, `img_id`) VALUES (?, ?, ?, ?)';
+        var rows = await pool.query(query, [data.disenio, data.Valor_USD, data.Opciones, data.img_id]);
+
         
         return rows;
     } catch (error) {
@@ -49,8 +50,9 @@ async function getNovedadesById(id) {
 
 
 async function modificarNovedadesById(obj, id) {
-    const query = 'UPDATE novedades_web SET diseño = ?, `valor-usd` = ?, opciones = ?, img_id = ? WHERE id = ?';
-    const rows = await pool.query(query, [obj.diseño, obj['valor-usd'], obj.opciones, obj.img_id, id]);
+    const query = 'UPDATE novedades_web SET disenio = ?, `valor-usd` = ?, opciones = ?, img_id = ? WHERE id = ?';
+    const rows = await pool.query(query, [obj.disenio, obj['valor-usd'], obj.opciones, obj.img_id, id]);
+
     return rows;
 }
 

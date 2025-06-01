@@ -58,7 +58,7 @@ router.post('/contacto', async (req, res) => {
 
     const mailOptions = {
         from: process.env.SMTP_USER,
-        to: "NUCLEOWEB@GMAIL.COM",
+        to: "nucleosweb9@gmail.com",
         subject: "Contacto Web",
         html: `
             <p><strong>${nombre}</strong> ha contactado a través de la web.</p>

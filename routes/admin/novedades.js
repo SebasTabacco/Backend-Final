@@ -17,8 +17,8 @@ router.get('/', async function (req, res, next) {
             ...novedad,
             imagen: novedad.img_id 
                 ? cloudinary.image(novedad.img_id, {
-                    width: 100,
-                    height: 100,
+                    width: 90,
+                    height: 80,
                     crop: 'fill'
                 })
                 : 'IMAGEN NO DISPONIBLE' // Imagen predeterminada
@@ -64,7 +64,7 @@ router.post('/agregar', async (req, res, next) => {
         }
         
         // Validar que todos los campos tengan valores
-        if (req.body.Diseno && req.body.Valor_USD && req.body.Opciones) {
+        if (req.body.disenio && req.body.Valor_USD && req.body.Opciones) {
             await novedadesModel.insertNovedades({
                 ...req.body,
                 img_id
@@ -183,7 +183,7 @@ router.post('/modificar', async (req, res, next) => {
 
         // Crear objeto con los datos a actualizar
         const obj = {
-            diseño: req.body.diseño,
+            disenio: req.body.disenio,
             'valor-usd': req.body['valor-usd'],
             opciones: req.body.opciones,
             img_id // Actualizar img_id en la base de datos
@@ -205,5 +205,3 @@ router.post('/modificar', async (req, res, next) => {
 });
 
 module.exports = router;
-
-
